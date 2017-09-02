@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app = "list">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+    <style>
+      .message { font-size: 1.2em; font-weight: bold; }
+    </style>
+  </head>
+<body>
+   <div class="container" ng-controller="listController">
+     <h1>Items List for Lunch</h1>
+       <div class="form-group">
+           <input id="lunch-menu" type="text"
+                  placeholder="List seperated by comma"
+                  class="form-control"
+                  ng-model = "name">
+       </div>
+     <div class="form-group">
+       <!-- Button created for  angular JS functions -->
+        <button class="btn btn-primary" ng-click = "mySplit()">Check If Too Much</button><br>
+        {{ Message | uppercase}}
+     </div>
+   </div>
+</body>
+</html>
